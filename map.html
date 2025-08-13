@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falmouth Beaches Map (Simplified)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .map-container {
+            position: relative;
+            /* Essential for positioning markers */
+            width: 80%;
+            /* Adjust as needed */
+            max-width: 800px;
+            /* Max width for larger screens */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Ensures markers don't spill out if placed near edge */
+            margin-bottom: 30px;
+        }
+
+        .map-container img {
+            width: 100%;
+            /* Make image fill the container */
+            height: auto;
+            display: block;
+            /* Remove extra space below image */
+        }
+
+        .beach-marker {
+            position: absolute;
+            /* Position relative to .map-container */
+            display: grid;
+            align-items: center;
+            text-align: center;
+            width: 75px;
+            height: 35px;
+            background-color: yellow;
+            /* Red color for markers */
+            border-radius: 15%;
+            /* Circular marker */
+            border: 2px solid #c0392b;
+            /* Darker red border */
+            transform: translate(-50%, -50%);
+            /* Center the marker on the exact coordinates */
+            cursor: help;
+            /* Indicates interactivity */
+            transition: background-color 0.2s ease-in-out;
+            z-index: 10;
+            /* Ensure markers are on top of the image */
+            font-size: 12px;
+        }
+
+        .beach-marker:hover {
+            background-color: #f1c40f;
+            /* Yellow on hover */
+            border-color: #f39c12;
+        }
+
+        /* Responsive adjustments for map container */
+        @media (max-width: 768px) {
+            .map-container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .map-container {
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        #chapoquoit {
+            top: 26%;
+            left: 27%;
+        }
+
+        #falmouth-heights {
+            top: 76%;
+            left: 62%;
+        }
+
+        #menauhant {
+            top: 72%;
+            left: 92%;
+        }
+
+        #old-silver {
+            top: 2%;
+            left: 34%;
+        }
+
+        #stoney {
+            top: 91%;
+            left: 9%;
+        }
+
+        #surf-drive {
+            top: 80%;
+            left: 43%;
+        }
+
+        #wood-neck {
+            top: 48%;
+            left: 33%;
+        }
+
+        /* Adjusted for new map */
+    </style>
+</head>
+
+<body>
+    <h1>Beaches of Falmouth, MA</h1>
+
+    <div class="map-container">
+        <!-- 
+            Actual image of Falmouth, MA provided by the user.
+            
+            NOTE: You will need to adjust the 'top' and 'left' percentages
+            for each .beach-marker in the CSS to accurately position them
+            on this specific image if the default positions are not exact enough.
+        -->
+        <img src="falmouth.jpg" alt="Map of Falmouth, MA">
+
+        <!-- Beach Markers -->
+        <div id="chapoquoit" class="beach-marker" title="Chapoquoit Beach">Chapoquoit</div>
+        <div id="falmouth-heights" class="beach-marker" title="Falmouth Heights Beach">Falmouth Heights</div>
+        <div id="menauhant" class="beach-marker" title="Menauhant Beach">Menauhant</div>
+        <div id="old-silver" class="beach-marker" title="Old Silver Beach">Old Silver</div>
+        <div id="stoney" class="beach-marker" title="Stoney Beach (Woods Hole)">Stoney</div>
+        <div id="surf-drive" class="beach-marker" title="Surf Drive Beach">Surf Drive</div>
+        <div id="wood-neck" class="beach-marker" title="Wood Neck Beach">Wood Neck</div>
+    </div>
+
+</body>
+
+</html>
