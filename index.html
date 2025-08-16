@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Falmouth Heights Tide Clock</title>
@@ -16,9 +19,9 @@
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
                     },
-                }
-            }
-        }
+                },
+            },
+        };
     </script>
     <!-- Include Lucide Icons for better visuals -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -37,7 +40,7 @@
                 <path d="M2 12c.63-.56 1.34-1 2.17-1.42A10 10 0 0112 8c4.17 0 6.17 1.25 8.17 2.58 1.48.97 2.17 1.42" />
                 <path d="M2 18c.63-.56 1.34-1 2.17-1.42A10 10 0 0112 14c4.17 0 6.17 1.25 8.17 2.58 1.48.97 2.17 1.42" />
             </svg>
-            Falmouth Heights Tide Clock
+            Falmouth Tides Clock
         </h1>
 
         <div class="mb-6">
@@ -46,24 +49,15 @@
         </div>
 
         <div class="mb-8 p-4 bg-blue-50 border border-blue-200 rounded-lg shadow-inner">
-            <label for="lastHighTide" class="block text-gray-700 text-base font-semibold mb-2">
-                Set Prior Known High Tide (Date and Time):
+            <label for="tide-datetime-select" class="block text-gray-700 text-base font-semibold mb-2">
+                Select the beach
             </label>
-            <input type="datetime-local" id="lastHighTide"
-                class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3 text-lg">
-            <button id="setTideBtn"
-                class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 duration-200">
-                <span class="flex items-center justify-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-Save">
-                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-                        <polyline points="17 21 17 13 7 13 7 21" />
-                        <polyline points="7 3 7 8 15 8" />
-                    </svg>
-                    Save Tide
-                </span>
-            </button>
+            <div class="mb-4">
+                <select id="tide-datetime-select"
+                    class="form-select block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3 text-lg text-gray-800">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
         </div>
 
         <div class="space-y-4 mb-8">
@@ -86,6 +80,7 @@
                 class="bg-red-100 p-4 rounded-lg shadow-md border-l-4 border-red-500 flex justify-between items-center">
                 <p class="text-gray-700 font-semibold text-lg">Next Low Tide:</p>
                 <p id="nextLowTide" class="text-red-700 text-xl font-bold"></p>
+
             </div>
         </div>
 
@@ -93,18 +88,12 @@
             <p class="text-gray-500 text-sm italic">
                 Note: This clock uses a simplified 12-hour, 25-minute semi-diurnal tide cycle for estimation.
                 Actual tide times vary by location due to complex factors.
-                <br />
-                <a href="https://www.usharbors.com/harbor/massachusetts/falmouth-ma/tides/"
-                    class="text-blue-600 hover:text-blue-800 hover:underline">
-                    Use US Harbors site to validate it.
-                </a>
-
             </p>
         </div>
     </div>
 
-    <script src="index.js"></script>
-
+    <script src="index.js">
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tideclock-pwa-cache-v1';
+const CACHE_NAME = 'tideclocks-pwa-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
