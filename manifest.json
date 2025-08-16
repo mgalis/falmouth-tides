@@ -3,6 +3,7 @@
     "short_name": "TidesClock",
     "description": "Falmouth MA Tides Clock",
     "start_url": "/falmouth-tides",
+     "scope": "/falmouth-tides/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#2196F3",
@@ -18,4 +19,5 @@
             "type": "image/png"
         }
     ]
+
 }
