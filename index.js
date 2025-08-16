@@ -24,11 +24,13 @@ if ('serviceWorker' in navigator) {
 
         const knownHighTides = [
             { beach: 'Falmouth Heights', knownHighTide : '2025-08-11T13:15' },
+            { beach: 'Bristol', knownHighTide : '2025-08-11T13:15' },
             { beach: 'Menauhant Beach', knownHighTide : '2025-08-15T04:07' },
-            { beach: 'Wood Neck', knownHighTide : '2025-08-15T13:31' },
             { beach: 'Stoney', knownHighTide : '2025-08-15T04:04' },
+            { beach: 'Wood Neck', knownHighTide : '2025-08-15T13:31' },
             { beach: 'Chapoquoit', knownHighTide : '2025-08-15T13:22' },
-            { beach: 'Old Silver', knownHighTide : '2025-08-15T13:25' }
+            { beach: 'Old Silver', knownHighTide : '2025-08-15T13:25' },
+            { beach: 'Megansett', knownHighTide : '2025-08-16T14:30' }
         ]
         // Define the tide cycle (12 hours and 25 minutes in milliseconds)
         const TIDE_CYCLE_MS = (12 * 60 + 25) * 60 * 1000;
@@ -179,3 +181,4 @@ if ('serviceWorker' in navigator) {
             setInterval(updateCurrentTime, 60000);
             setInterval(calculateTides, 60000); // Recalculate tides every minute
         };
+
