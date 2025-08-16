@@ -25,7 +25,7 @@ if ('serviceWorker' in navigator) {
         const knownHighTides = [
             { beach: 'Falmouth Heights', knownHighTide : '2025-08-11T13:15' },
             { beach: 'Bristol', knownHighTide : '2025-08-11T13:15' },
-            { beach: 'Menauhant Beach', knownHighTide : '2025-08-15T04:07' },
+            { beach: 'Menauhant', knownHighTide : '2025-08-15T04:07' },
             { beach: 'Stoney', knownHighTide : '2025-08-15T04:04' },
             { beach: 'Wood Neck', knownHighTide : '2025-08-15T13:31' },
             { beach: 'Chapoquoit', knownHighTide : '2025-08-15T13:22' },
